@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "406179a5-599a-415b-8c86-323c5f3698a5",
+		"name": "Survey",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1438151"
+	},
+	"item": [
+		{
+			"name": "Get Survey Results",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYmhvbHUiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjYwMDQ1ODI1LCJleHAiOjE2NjAwNDY0MjV9.v1nJslldPf0Aswg3wAeyO6Yww_T0TeZKNRPwLwYCsIM7qXx_ILIzEIIfVGxxsXlTh6dv69oUZlTqI5SQ8lljiA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"name\": \"Survey 1\",\r\n    \"questions\" : [\r\n        {\r\n            \"question\":\"What is your Name?\"\r\n        },\r\n        {\r\n            \"question\":\"What is your Age?\"\r\n        }]\r\n  }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/surveyservice/survey/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"surveyservice",
+						"survey",
+						"15"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "sortBy",
+							"value": "id",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "bholu",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "bholu",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "sortBy",
+							"value": "id",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Survey",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYmhvbHUiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjYwMDMxNjI4LCJleHAiOjE2NjAwMzIyMjh9.VAV6kOMyqf_XrdqiNwvh0xdahmFmC7kzHPIvuRsv5LUAAf20JliiKMML2X68QmuaEexF8y1XdtxGZXWC2t2R7Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"name\": \"Survey 3\",\r\n    \"questions\" : [\r\n        {\r\n            \"question\":\"What is your Name?\"\r\n        },\r\n        {\r\n            \"question\":\"What is your Age?\"\r\n        }]\r\n  }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bookservice/survey",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookservice",
+						"survey"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "sortBy",
+							"value": "id",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Take Survey",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYmhvbHUiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjYwMDQ1MTUyLCJleHAiOjE2NjAwNDU3NTJ9.Lun3ECLAaFw-jnYXC0ayojotJlYi_eyPuf-6juxdlpbOvY36HSPabVHlD7p93T60hEZZKapLlg8y2zZOL80NiQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"questions\": [\r\n        {\r\n            \"questionId\": 11,\r\n            \"answer\": \"Bholu Test\"\r\n        },\r\n        {\r\n            \"questionId\": 12,\r\n            \"answer\": \"Trushil Test\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bookservice/survey/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bookservice",
+						"survey",
+						"15"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "sortBy",
+							"value": "id",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Survey Details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiYmhvbHUiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjYwMDQ1MTUyLCJleHAiOjE2NjAwNDU3NTJ9.Lun3ECLAaFw-jnYXC0ayojotJlYi_eyPuf-6juxdlpbOvY36HSPabVHlD7p93T60hEZZKapLlg8y2zZOL80NiQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"name\": \"Survey 1\",\r\n    \"questions\" : [\r\n        {\r\n            \"question\":\"What is your Name?\"\r\n        },\r\n        {\r\n            \"question\":\"What is your Age?\"\r\n        }]\r\n  }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/surveyservice/survey/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"surveyservice",
+						"survey",
+						"15"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "sortBy",
+							"value": "id",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
